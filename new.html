@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id='root'></div>
+    <script type="text/babel">
+        const root=ReactDOM.createRoot(document.getElementById('root'));
+        // document 是浏览器提供的、代表整个网页内容的对象。
+        // document.getElementById('root')：让浏览器去网页里找 id='root' 的标签。
+        // ReactDOM是一个包含 DOM 操作方法的工具对象。
+        // DOM 是浏览器给网页建的 **“结构化地图”** —— 把网页里的所有标签（<div>、<h1>、<body> 等）转换成 JS 能看懂、能操作的对象，让你能用代码控制网页内容。
+        // ReactDOM.createRoot(...)：让 React 接管网页里 id 为 root 的 div 盒子，创建一个 “专属渲染控制器”，后续所有 React 内容都通过这个控制器渲染到这个盒子里，返回一个 React 根容器对象/ 根实例。
+        // 根组件为传给 root.render() 的那个内容，是 React 渲染的 “最顶层组件”，所有其他组件都嵌套在它下面。
+        root.render(<h1>宝可梦</h1>);
+    </script>
+</body>
+</html>
